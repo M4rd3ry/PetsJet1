@@ -49,20 +49,18 @@ form input, form select, form textarea {
     border-radius: 4px;
 }
 
-button {
+form button {
+    padding: 10px 20px;
     background-color: #4CAF50;
     color: white;
     border: none;
-    padding: 10px 20px;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-button:hover {
+form button:hover {
     background-color: #45a049;
-    transform: scale(1.05); /* Легкое увеличение */
 }
-
 
 .popup {
     position: fixed;
