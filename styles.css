@@ -47,7 +47,7 @@ form {
 }
 
 .popup.hidden {
-    display: none;
+    display: none; /* Класс для скрытия */
 }
 
 
