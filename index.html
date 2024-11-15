@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetsJet - Перевозка домашних животных</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="#about">О нас</a>
+            <a href="#services">Услуги</a>
+            <a href="#directions">Направления</a>
+            <a href="#contact">Контакты</a>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <h1>PetsJet</h1>
+            <p>Профессиональная перевозка домашних животных по всему миру.</p>
+        </section>
+        <section id="services">
+            <h2>Наши услуги</h2>
+            <ul>
+                <li>Транспортировка воздушным и наземным транспортом</li>
+                <li>Сопровождение животных</li>
+                <li>Помощь в покупке билетов</li>
+            </ul>
+        </section>
+        <section id="directions">
+            <h2>Направления</h2>
+            <p>Мы работаем с маршрутами по всему миру, включая Европу, США, Канаду и другие страны.</p>
+        </section>
+        <section id="contact">
+            <h2>Оставить заявку</h2>
+            <form id="contact-form">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="messenger">Мессенджер:</label>
+                <select id="messenger">
+                    <option value="telegram">Telegram</option>
+                    <option value="whatsapp">WhatsApp</option>
+                    <option value="viber">Viber</option>
+                </select>
+                <label for="route">Маршрут:</label>
+                <input type="text" id="route" name="route" required>
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 PetsJet</p>
+    </footer>
+</body>
+</html>
