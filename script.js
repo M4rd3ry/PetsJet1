@@ -62,3 +62,7 @@ document.getElementById('contact-form').addEventListener('submit', (event) => {
     });
 });
 
+function toggleMenu() {
+    const navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('active');
+}

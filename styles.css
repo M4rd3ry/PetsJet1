@@ -85,28 +85,29 @@ form button:hover {
     background: #222;
     color: white;
 }
-/* Для экранов шириной до 768px (планшеты и мобильные) */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
 @media (max-width: 768px) {
-    body {
-        font-size: 14px;
-        padding: 10px;
+    .hamburger {
+        display: block;
     }
 
-    header .navbar a {
-        display: block; /* Кнопки меню будут друг под другом */
-        padding: 10px;
-        text-align: center;
+    .navbar {
+        display: none;
+        flex-direction: column;
     }
 
-    form {
-        margin: 10px;
-        padding: 15px;
-    }
-
-    form input, form select, form textarea {
-        font-size: 14px;
+    .navbar.active {
+        display: flex;
     }
 }
+
 
 /* Для экранов шириной до 480px (мобильные телефоны) */
 @media (max-width: 480px) {
