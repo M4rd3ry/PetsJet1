@@ -78,13 +78,13 @@ form button:hover {
     display: none; /* Класс для скрытия */
 }
 
-
 .footer {
     text-align: center;
     padding: 10px 0;
     background: #222;
     color: white;
 }
+
 .hamburger {
     display: none;
     font-size: 24px;
@@ -108,7 +108,6 @@ form button:hover {
     }
 }
 
-
 /* Для экранов шириной до 480px (мобильные телефоны) */
 @media (max-width: 480px) {
     header .navbar {
@@ -124,6 +123,7 @@ form button:hover {
         width: 100%; /* Кнопка занимает всю ширину */
     }
 }
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -139,4 +139,15 @@ form button:hover {
 .navbar a:hover {
     color: #fff;
     background-color: #4CAF50;
+}
+
+/* Анимация плавного появления */
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Когда элемент появляется на экране */
+.fade-in.visible {
+    opacity: 1;
 }
