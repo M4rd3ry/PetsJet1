@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const popup = document.getElementById('discount-popup');
-    const closePopup = document.getElementById('close-popup');
+    const coupon = document.getElementById('coupon');
+    const closeBtn = document.getElementById('close-coupon');
 
     setTimeout(() => {
-        popup.classList.remove('hidden');
-    }, 10000); // Показываем через 10 секунд
+        coupon.classList.remove('hidden'); // Показывает купон через 10 секунд
+    }, 10000);
 
-    closePopup.addEventListener('click', () => {
-        popup.classList.add('hidden');
+    closeBtn.addEventListener('click', () => {
+        coupon.classList.add('hidden'); // Закрывает купон по клику
     });
 });
