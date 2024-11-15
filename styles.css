@@ -123,3 +123,19 @@ form button:hover {
         width: 100%; /* Кнопка занимает всю ширину */
     }
 }
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Упаковка строк при нехватке места */
+}
+
+.navbar a {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #4CAF50;
+}
+
+.navbar a:hover {
+    color: #fff;
+    background-color: #4CAF50;
+}
