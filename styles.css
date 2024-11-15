@@ -64,6 +64,10 @@ form button:hover {
     transform: scale(1.05); /* Легкое увеличение */
 }
 
+.hidden {
+    display: none; /* Скрывает элемент */
+}
+
 .popup {
     position: fixed;
     top: 20%;
@@ -73,11 +77,6 @@ form button:hover {
     border: 2px solid #4CAF50;
     padding: 20px;
     z-index: 1000;
-    display: none; /* Скрыто по умолчанию */
-}
-
-.popup.hidden {
-    display: none; /* Класс для скрытия */
 }
 
 .footer {
