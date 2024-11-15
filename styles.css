@@ -6,12 +6,11 @@ body {
 }
 
 .header {
-    background: #4CAF50;
+    background-color: #333; /* Тёмный цвет фона */
     color: white;
     padding: 20px 0;
     text-align: center;
 }
-
 .section {
     padding: 20px 0;
 }
@@ -100,14 +99,16 @@ form button:hover {
     }
 
     .navbar {
-        display: none;
-        flex-direction: column;
-    }
+        display: block; /* Вертикальное размещение элементов */
+        background-color: #333; /* Тёмный фон для мобильного меню */
+    }   
 
-    .navbar.active {
-        display: flex;
+    .navbar a {
+        padding: 15px;
+        display: block; /* Размещение ссылок в столбик */
     }
 }
+
 
 /* Для экранов шириной до 480px (мобильные телефоны) */
 @media (max-width: 480px) {
