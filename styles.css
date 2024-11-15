@@ -171,3 +171,10 @@ form button:hover {
 .delayed-animation.visible {
     opacity: 1;
 }
+.zoom-on-hover {
+    display: block;
+}
+
+.zoom-on-hover[alt] {
+    display: none; /* Скрывает текст из alt */
+}
