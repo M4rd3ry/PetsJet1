@@ -51,7 +51,7 @@ form input, form select, form textarea {
 
 form button {
     padding: 10px 20px;
-    background-color: #000000;
+    background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 4px;
@@ -60,7 +60,7 @@ form button {
 }
 
 form button:hover {
-    background-color: #000000;
+    background-color: #4CAF50;
     transform: scale(1.05); /* Легкое увеличение */
 }
 
@@ -134,12 +134,14 @@ form button:hover {
 .navbar a {
     text-decoration: none;
     padding: 10px 15px;
-    color: #4CAF50;
+    color: white; /* Белый цвет текста */
+    background-color: #4CAF50; /* Цвет фона кнопки */
+    border-radius: 4px; /* Закругленные углы */
+    transition: background-color 0.3s ease;
 }
 
 .navbar a:hover {
-    color: #fff;
-    background-color: #4CAF50;
+    background-color: #45a049; /* Цвет фона при наведении */
 }
 
 /* Анимация плавного появления */
