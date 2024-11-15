@@ -20,14 +20,27 @@ document.getElementById('contact-form').addEventListener('submit', (event) => {
 
     const formData = new FormData(event.target);
 
+    // Проверяем, что поля не пустые
+    const name = formData.get('name');
+    const email = formData.get('email');
+    const phone = formData.get('phone');
+    const messenger = formData.get('messenger');
+    const route = formData.get('route');
+    const comments = formData.get('comments');
+
+    if (!name || !email || !phone) {
+        alert('Пожалуйста, заполните обязательные поля.');
+        return;
+    }
+
     // Собираем данные из формы
     const data = {
-        name: formData.get('name'),
-        email: formData.get('email'),
-        phone: formData.get('phone'),
-        messenger: formData.get('messenger'),
-        route: formData.get('route'),
-        comments: formData.get('comments')
+        name: name,
+        email: email,
+        phone: phone,
+        messenger: messenger,
+        route: route,
+        comments: comments || 'Нет'
     };
 
     // Отправляем данные в Telegram-бот
@@ -40,7 +53,7 @@ document.getElementById('contact-form').addEventListener('submit', (event) => {
         📱 Телефон: ${data.phone}
         💬 Мессенджер: ${data.messenger}
         📍 Маршрут: ${data.route}
-        📝 Комментарии: ${data.comments || 'Нет'}
+        📝 Комментарии: ${data.comments}
     `;
 
     fetch(`https://api.telegram.org/bot${telegramBotToken}/sendMessage`, {
@@ -57,8 +70,8 @@ document.getElementById('contact-form').addEventListener('submit', (event) => {
         }
     })
     .catch((error) => {
-        console.error('Ошибка:', error);
-        alert('Не удалось отправить заявку.');
+        console.error('Ошибка при отправке заявки:', error);
+        alert('Не удалось отправить заявку. Проверьте ваше интернет-соединение.');
     });
 });
 
@@ -69,13 +82,18 @@ function toggleMenu() {
 
 document.addEventListener('DOMContentLoaded', () => {
     const fadeInElements = document.querySelectorAll('.fade-in');
-
+    
+    // Дебаунсинг для события scroll
+    let debounceTimer;
     window.addEventListener('scroll', () => {
-        fadeInElements.forEach((element) => {
-            const rect = element.getBoundingClientRect();
-            if (rect.top <= window.innerHeight) {
-                element.classList.add('visible');
-            }
-        });
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => {
+            fadeInElements.forEach((element) => {
+                const rect = element.getBoundingClientRect();
+                if (rect.top <= window.innerHeight) {
+                    element.classList.add('visible');
+                }
+            });
+        }, 100); // Задержка 100 мс
     });
 });
