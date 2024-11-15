@@ -32,26 +32,35 @@
                 <li>Помощь в покупке билетов</li>
             </ul>
         </section>
-        <section id="directions">
-            <h2>Направления</h2>
-            <p>Мы работаем с маршрутами по всему миру, включая Европу, США, Канаду и другие страны.</p>
-        </section>
         <section id="contact">
             <h2>Оставить заявку</h2>
             <form id="contact-form">
                 <label for="name">Имя:</label>
                 <input type="text" id="name" name="name" required>
-                <label for="messenger">Мессенджер:</label>
-                <select id="messenger">
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" name="phone" required>
+        
+                <label for="messenger">Выберите мессенджер:</label>
+                <select id="messenger" name="messenger">
                     <option value="telegram">Telegram</option>
                     <option value="whatsapp">WhatsApp</option>
                     <option value="viber">Viber</option>
                 </select>
-                <label for="route">Маршрут:</label>
+        
+                <label for="route">Маршрут (откуда и куда):</label>
                 <input type="text" id="route" name="route" required>
+        
+                <label for="comments">Комментарии:</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+        
                 <button type="submit">Отправить</button>
             </form>
         </section>
+        
     </main>
     <footer>
         <p>© 2024 PetsJet</p>
