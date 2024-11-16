@@ -106,7 +106,7 @@ form button:hover {
 
 @media (max-width: 768px) {
     .hamburger {
-        display: block;
+        display: block; /* Показываем гамбургер */
     }
 
     .navbar {
@@ -116,7 +116,7 @@ form button:hover {
     }
 
     .navbar.active {
-        display: flex; /* Появляется при активации */
+        display: flex; /* Показываем меню при добавлении класса active */
     }
 
     .navbar a {
@@ -129,7 +129,7 @@ form button:hover {
     }
 
     .navbar a:hover {
-        background-color: #45a049;
+        background-color: #45a049; /* Цвет при наведении */
     }
 }
 

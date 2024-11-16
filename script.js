@@ -14,12 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('Element not found: #coupon or #close-coupon');
     }
 });
-document.getElementById('hamburger').addEventListener('click', () => {
-    // Получаем элементы
+document.getElementById('hamburger').addEventListener('click', function() {
     const navbar = document.querySelector('.navbar');
-    
-    // Включаем или отключаем активное меню
-    navbar.classList.toggle('active'); 
+    navbar.classList.toggle('active');
 });
 
 
