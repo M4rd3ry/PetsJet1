@@ -1,3 +1,4 @@
+/* Сброс стилей и основные настройки */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -5,26 +6,32 @@ body {
     padding: 0;
 }
 
+/* Стили для шапки */
 .header {
     background-color: #333; /* Тёмный цвет фона */
     color: white;
     padding: 20px 0;
     text-align: center;
 }
+
+/* Основные секции */
 .section {
     padding: 20px 0;
 }
 
+/* Контейнер с ограничением ширины */
 .container {
     width: 80%;
     margin: auto;
 }
 
+/* Заголовки */
 h2 {
     text-align: center;
     margin-bottom: 10px;
 }
 
+/* Стили формы */
 form {
     max-width: 600px;
     margin: 20px auto;
@@ -59,14 +66,16 @@ form button {
 }
 
 form button:hover {
-    background-color: #4CAF50;
+    background-color: #45a049;
     transform: scale(1.05); /* Легкое увеличение */
 }
 
+/* Скрытые элементы */
 .hidden {
     display: none; /* Скрывает элемент */
 }
 
+/* Стили для попапа */
 .popup {
     position: fixed;
     top: 20%;
@@ -78,6 +87,7 @@ form button:hover {
     z-index: 1000;
 }
 
+/* Стили для подвала */
 .footer {
     text-align: center;
     padding: 10px 0;
@@ -85,6 +95,7 @@ form button:hover {
     color: white;
 }
 
+/* Гамбургер меню */
 .hamburger {
     display: none;
     font-size: 24px;
@@ -99,59 +110,66 @@ form button:hover {
     }
 
     .navbar {
-        display: block; /* Вертикальное размещение элементов */
-        background-color: #333; /* Тёмный фон для мобильного меню */
-    }   
+        display: none; /* Скрыто по умолчанию */
+        flex-direction: column;
+        background-color: #333;
+    }
+
+    .navbar.active {
+        display: flex; /* Появляется при активации */
+    }
 
     .navbar a {
         padding: 15px;
-        display: block; /* Размещение ссылок в столбик */
+        display: block; /* Ссылки в столбик */
+        color: white;
+        background-color: #4CAF50;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+    .navbar a:hover {
+        background-color: #45a049;
     }
 }
 
-
 /* Для экранов шириной до 480px (мобильные телефоны) */
 @media (max-width: 480px) {
-    header .navbar {
-        flex-direction: column; /* Вертикальное меню */
-        align-items: center;
-    }
-
     section {
         padding: 10px;
     }
 
     form button {
-        width: 100%; /* Кнопка занимает всю ширину */
+        width: 100%; /* Кнопка на всю ширину */
     }
 }
 
+/* Основное меню */
 .navbar {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; /* Упаковка строк при нехватке места */
+    flex-wrap: wrap; /* Упаковка элементов при нехватке места */
 }
 
 .navbar a {
     text-decoration: none;
     padding: 10px 15px;
-    color: white; /* Белый цвет текста */
-    background-color: #4CAF50; /* Цвет фона кнопки */
-    border-radius: 4px; /* Закругленные углы */
+    color: white; /* Белый текст */
+    background-color: #4CAF50;
+    border-radius: 4px;
     transition: background-color 0.3s ease;
 }
 
 .navbar a:hover {
-    background-color: #45a049; /* Цвет фона при наведении */
+    background-color: #45a049; /* Цвет при наведении */
 }
 
-/* Анимация плавного появления */
+/* Элементы с плавной анимацией */
 .fade-in {
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
 
-/* Когда элемент появляется на экране */
 .fade-in.visible {
     opacity: 1;
 }
@@ -173,10 +191,17 @@ form button:hover {
 .delayed-animation.visible {
     opacity: 1;
 }
+
+/* Увеличение изображения при наведении */
 .zoom-on-hover {
     display: block;
+    transition: transform 0.3s ease;
+}
+
+.zoom-on-hover:hover {
+    transform: scale(1.1); /* Увеличение изображения */
 }
 
 .zoom-on-hover[alt] {
-    display: none; /* Скрывает текст из alt */
+    display: none; /* Скрывает alt-текст */
 }
