@@ -17,18 +17,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // Обработчик попапа
     const coupon = document.getElementById('coupon');
     const closeBtn = document.getElementById('close-coupon');
+    
     if (coupon && closeBtn) {
         console.log('Попап и кнопка закрытия найдены');
-        
+
         // Показываем попап через 10 секунд
         setTimeout(() => {
             console.log('Попап показан');
-            coupon.classList.remove('hidden');
-        }, 10000); // Показываем попап через 1 секунду для теста
+            coupon.classList.add('show');  // Добавляем класс для показа попапа
+        }, 10000); // Показываем попап через 10 секунд
 
         closeBtn.addEventListener('click', () => {
             console.log('Попап закрыт');
-            coupon.classList.add('hidden'); // Закрываем попап
+            coupon.classList.remove('show');  // Убираем класс для скрытия попапа
         });
     } else {
         console.error('Не удалось найти элементы: #coupon или #close-coupon');
