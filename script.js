@@ -16,14 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 document.getElementById('hamburger').addEventListener('click', () => {
     // Получаем элементы
-    const hamburger = document.getElementById('hamburger');
     const navbar = document.querySelector('.navbar');
     
-    // Слушаем событие на гамбургер-иконке
-    hamburger.addEventListener('click', () => {
-    navbar.classList.toggle('active'); // Включаем или отключаем активное меню
-    });
-};
+    // Включаем или отключаем активное меню
+    navbar.classList.toggle('active'); 
+});
+
 
 
 
