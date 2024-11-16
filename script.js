@@ -18,14 +18,15 @@ document.getElementById('hamburger').addEventListener('click', () => {
     // Получаем элементы
 const hamburger = document.getElementById('hamburger');
 const navbar = document.querySelector('.navbar');
-    navbar.classList.toggle('active'); // Переключаем класс для отображения меню
-});
-
-
+    
 // Слушаем событие на гамбургер-иконке
 hamburger.addEventListener('click', () => {
     navbar.classList.toggle('active'); // Включаем или отключаем активное меню
 });
+
+
+
+
 document.getElementById('contact-form').addEventListener('submit', (event) => {
     event.preventDefault(); // Отключаем стандартную отправку формы
 
