@@ -15,12 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 document.getElementById('hamburger').addEventListener('click', () => {
-    const navbar = document.querySelector('.navbar');
-    navbar.classList.toggle('active'); // Переключаем класс для отображения меню
-});
-// Получаем элементы
+    // Получаем элементы
 const hamburger = document.getElementById('hamburger');
 const navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('active'); // Переключаем класс для отображения меню
+});
+
 
 // Слушаем событие на гамбургер-иконке
 hamburger.addEventListener('click', () => {
