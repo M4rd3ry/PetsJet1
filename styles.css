@@ -76,15 +76,15 @@ form button:hover {
 }
 
 /* Стили для попапа */
-.popup {
+#coupon {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 50%; /* Центрируем по вертикали */
+    left: 50%; /* Центрируем по горизонтали */
+    transform: translate(-50%, -50%); /* Подправляем позицию, чтобы центр был точно в центре */
     background: #fff;
     border: 2px solid #4CAF50;
     padding: 20px;
-    z-index: 1000;
+    z-index: 1000; /* Обеспечиваем, чтобы попап был поверх других элементов */
     display: block; /* Убедитесь, что попап отображается */
 }
 
