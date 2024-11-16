@@ -14,7 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('Element not found: #coupon or #close-coupon');
     }
 });
-
+document.getElementById('hamburger').addEventListener('click', () => {
+    const navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('active'); // Переключаем класс для отображения меню
+});
 document.getElementById('contact-form').addEventListener('submit', (event) => {
     event.preventDefault(); // Отключаем стандартную отправку формы
 
