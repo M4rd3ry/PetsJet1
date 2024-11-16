@@ -12,12 +12,18 @@
 
     <header class="header">
         <nav class="navbar">
-            <a href="#about">О нас</a>
-            <a href="#services">Услуги</a>
-            <a href="#directions">Направления</a>
-            <a href="#contact">Контакты</a>
+            <button class="hamburger" id="hamburger" aria-label="Меню">
+                &#9776; <!-- Символ гамбургера -->
+            </button>
+            <div class="menu">
+                <a href="#about">О нас</a>
+                <a href="#services">Услуги</a>
+                <a href="#directions">Направления</a>
+                <a href="#contact">Контакты</a>
+            </div>
         </nav>
     </header>
+    
     <div id="coupon" class="popup hidden">
         <p>Получите скидку 20%! Промокод: WELCOME20</p>
         <button id="close-coupon">Закрыть</button>
