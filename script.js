@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             console.log('Попап показан');
             coupon.classList.remove('hidden');
-        }, 1000); // Показываем попап через 1 секунду для теста
+        }, 10000); // Показываем попап через 1 секунду для теста
 
         closeBtn.addEventListener('click', () => {
             console.log('Попап закрыт');
