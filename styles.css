@@ -79,35 +79,37 @@ form button:hover {
 
 /* Стили для попапа */
 #coupon {
-    position: fixed;          /* Фиксированное положение относительно экрана */
-    top: 50%;                 /* Центрируем по вертикали */
-    left: 50%;                /* Центрируем по горизонтали */
-    transform: translate(-50%, -50%); /* Центрируем попап относительно его размеров */
-    background: rgba(255, 255, 255, 0.9);  /* Белый фон с небольшим уровнем прозрачности */
-    border: 2px solid #4CAF50; /* Рамка попапа */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid #4CAF50;
     padding: 20px;
-    z-index: 1000;            /* Попап будет поверх всех других элементов */
-    display: none;            /* Скрыто по умолчанию */
-    box-sizing: border-box;   /* Учитываем padding в расчете размеров */
-    max-width: 80%;           /* Ограничим максимальную ширину попапа */
-    max-height: 80%;          /* Ограничим максимальную высоту попапа */
-    overflow: auto;           /* Добавим скроллинг, если содержимого будет слишком много */
+    z-index: 1000;
+    display: none;  /* Скрыто по умолчанию */
+    width: 80%; /* Ограничиваем ширину */
+    max-width: 500px; /* Максимальная ширина */
+    text-align: center; /* Выравнивание текста */
+    box-sizing: border-box; /* Учитываем padding в расчете размеров */
 }
 
-/* Плавное появление попапа */
+/* Класс для отображения попапа */
 #coupon.show {
-    display: block;           /* Показываем попап */
-    animation: fadeIn 0.5s ease-in-out; /* Плавное появление */
+    display: block; /* Показываем попап */
 }
 
-/* Анимация плавного появления */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+/* Кнопка закрытия */
+#close-coupon {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+#close-coupon:hover {
+    background-color: #45a049;
 }
 
 
