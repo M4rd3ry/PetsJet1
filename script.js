@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Гамбургер кликнут');
             navbar.classList.toggle('active'); // Переключаем класс "active" для отображения/скрытия меню
         });
+        
     } else {
         console.error('Не удалось найти элементы: #hamburger или .navbar');
     }
@@ -21,8 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Показываем попап через 10 секунд
         setTimeout(() => {
-            coupon.classList.remove('hidden'); // Показываем попап
-        }, 10000); // Задержка 10 секунд
+            console.log('Попап показан');
+            coupon.classList.remove('hidden');
+        }, 1000); // Показываем попап через 1 секунду для теста
 
         closeBtn.addEventListener('click', () => {
             console.log('Попап закрыт');
