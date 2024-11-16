@@ -20,12 +20,14 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Попап и кнопка закрытия найдены');
         setTimeout(() => {
             coupon.classList.remove('hidden'); // Показываем попап через 10 секунд
-        }, 10000);
+        }, 10000); // 10 секунд = 10000 миллисекунд
 
         closeBtn.addEventListener('click', () => {
             coupon.classList.add('hidden'); // Закрываем попап
         });
     }
+
+
 
     // Обработчик для отправки формы
     const form = document.getElementById('contact-form');

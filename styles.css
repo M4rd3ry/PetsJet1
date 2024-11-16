@@ -85,6 +85,7 @@ form button:hover {
     border: 2px solid #4CAF50;
     padding: 20px;
     z-index: 1000;
+    display: block; /* Убедитесь, что попап отображается */
 }
 
 /* Стили для подвала */
@@ -129,18 +130,6 @@ form button:hover {
 
     .navbar a:hover {
         background-color: #45a049;
-    }
-}
-
-
-/* Для экранов шириной до 480px (мобильные телефоны) */
-@media (max-width: 480px) {
-    section {
-        padding: 10px;
-    }
-
-    form button {
-        width: 100%; /* Кнопка на всю ширину */
     }
 }
 
