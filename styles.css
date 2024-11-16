@@ -135,9 +135,7 @@ form button:hover {
 
 /* Основное меню */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; /* Упаковка элементов при нехватке места */
+    display: none;
 }
 
 .navbar a {
