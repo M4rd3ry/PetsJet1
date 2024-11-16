@@ -95,43 +95,43 @@ form button:hover {
     color: white;
 }
 
-/* Гамбургер меню */
+/* Стили для гамбургера и меню */
 .hamburger {
     display: none;
-    font-size: 24px;
+    font-size: 30px;
     background: none;
     border: none;
     cursor: pointer;
 }
 
 @media (max-width: 768px) {
-    .hamburger {
-        display: block; /* Показываем гамбургер */
-    }
-
     .navbar {
-        display: none; /* Скрыто по умолчанию */
+        display: none;
         flex-direction: column;
         background-color: #333;
     }
 
     .navbar.active {
-        display: flex; /* Показываем меню при добавлении класса active */
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
     }
 
     .navbar a {
         padding: 15px;
-        display: block; /* Ссылки в столбик */
+        display: block;
         color: white;
         background-color: #4CAF50;
         border-radius: 4px;
-        transition: background-color 0.3s ease;
     }
 
     .navbar a:hover {
-        background-color: #45a049; /* Цвет при наведении */
+        background-color: #45a049;
     }
 }
+
 
 /* Для экранов шириной до 480px (мобильные телефоны) */
 @media (max-width: 480px) {

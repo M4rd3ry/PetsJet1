@@ -1,32 +1,30 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Кнопка закрытия попапа
-    const coupon = document.getElementById('coupon');
-    const closeBtn = document.getElementById('close-coupon');
+    // Проверка на существование гамбургера и навигации
+    const hamburger = document.getElementById('hamburger');
+    const navbar = document.querySelector('.navbar');
 
-    if (coupon && closeBtn) {
-        // Показываем попап через 10 секунд
-        setTimeout(() => {
-            coupon.classList.remove('hidden');
-        }, 10000);
-
-        // Закрываем попап при клике на кнопку
-        closeBtn.addEventListener('click', () => {
-            coupon.classList.add('hidden');
+    if (hamburger && navbar) {
+        hamburger.addEventListener('click', () => {
+            navbar.classList.toggle('active'); // Переключаем класс "active" для отображения/скрытия меню
         });
     } else {
-        console.error('Element not found: #coupon or #close-coupon');
+        console.error('Не удалось найти элементы: #hamburger или .navbar');
     }
 
-    // Обработчик гамбургера
-    const hamburger = document.getElementById('hamburger');
-    if (hamburger) {
-        hamburger.addEventListener('click', () => {
-            const navbar = document.querySelector('.navbar');
-            navbar.classList.toggle('active');
+    // Обработчик попапа
+    const coupon = document.getElementById('coupon');
+    const closeBtn = document.getElementById('close-coupon');
+    if (coupon && closeBtn) {
+        setTimeout(() => {
+            coupon.classList.remove('hidden'); // Показываем попап через 10 секунд
+        }, 10000);
+
+        closeBtn.addEventListener('click', () => {
+            coupon.classList.add('hidden'); // Закрываем попап
         });
     }
 
-    // Обработчик отправки формы
+    // Обработчик для отправки формы
     const form = document.getElementById('contact-form');
     if (form) {
         form.addEventListener('submit', (event) => {
@@ -47,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            // Собираем данные из формы
             const data = {
                 name: name,
                 email: email,
@@ -90,10 +87,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Обработчик для fade-in анимации
+    // Fade-in элементы на прокрутке
     const fadeInElements = document.querySelectorAll('.fade-in');
     if (fadeInElements.length) {
-        // Дебаунсинг для события scroll
         let debounceTimer;
         window.addEventListener('scroll', () => {
             clearTimeout(debounceTimer);
@@ -104,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         element.classList.add('visible');
                     }
                 });
-            }, 100); // Задержка 100 мс
+            }, 100);
         });
     }
 });
