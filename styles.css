@@ -97,8 +97,8 @@ form button:hover {
 }
 
 /* Стили для гамбургера и меню */
-.hamburger {
-    display: none;
+#hamburger {
+    display: none;  /* Гамбургер скрыт по умолчанию */
     font-size: 30px;
     background: none;
     border: none;
@@ -113,11 +113,11 @@ form button:hover {
     }
 
     .navbar.active {
-        display: block;
+        display: block; /* Меню отображается, когда класс active */
     }
 
-    .hamburger {
-        display: block;
+    #hamburger {
+        display: block; /* Показываем гамбургер на мобильных устройствах */
     }
 
     .navbar a {
