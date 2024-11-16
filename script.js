@@ -4,7 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const navbar = document.querySelector('.navbar');
 
     if (hamburger && navbar) {
+        console.log('Гамбургер и навигация найдены');
         hamburger.addEventListener('click', () => {
+            console.log('Гамбургер кликнут');
             navbar.classList.toggle('active'); // Переключаем класс "active" для отображения/скрытия меню
         });
     } else {
@@ -15,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const coupon = document.getElementById('coupon');
     const closeBtn = document.getElementById('close-coupon');
     if (coupon && closeBtn) {
+        console.log('Попап и кнопка закрытия найдены');
         setTimeout(() => {
             coupon.classList.remove('hidden'); // Показываем попап через 10 секунд
         }, 10000);
