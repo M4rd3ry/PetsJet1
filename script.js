@@ -18,16 +18,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeBtn = document.getElementById('close-coupon');
     if (coupon && closeBtn) {
         console.log('Попап и кнопка закрытия найдены');
+        
+        // Показываем попап через 10 секунд
         setTimeout(() => {
-            coupon.classList.remove('hidden'); // Показываем попап через 10 секунд
-        }, 10000); // 10 секунд = 10000 миллисекунд
+            coupon.classList.remove('hidden'); // Показываем попап
+        }, 10000); // Задержка 10 секунд
 
         closeBtn.addEventListener('click', () => {
+            console.log('Попап закрыт');
             coupon.classList.add('hidden'); // Закрываем попап
         });
+    } else {
+        console.error('Не удалось найти элементы: #coupon или #close-coupon');
     }
-
-
 
     // Обработчик для отправки формы
     const form = document.getElementById('contact-form');
@@ -102,6 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 fadeInElements.forEach((element) => {
                     const rect = element.getBoundingClientRect();
                     if (rect.top <= window.innerHeight) {
+                        console.log('Fade-in triggered for:', element);
                         element.classList.add('visible');
                     }
                 });

@@ -113,7 +113,7 @@ form button:hover {
     }
 
     .navbar.active {
-        display: flex;
+        display: block;
     }
 
     .hamburger {
@@ -156,7 +156,7 @@ form button:hover {
 /* Элементы с плавной анимацией */
 .fade-in {
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 0.5s ease-in;
 }
 
 .fade-in.visible {
