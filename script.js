@@ -14,9 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('Element not found: #coupon or #close-coupon');
     }
 });
-document.getElementById('hamburger').addEventListener('click', function() {
-    const navbar = document.querySelector('.navbar');
-    navbar.classList.toggle('active');
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('hamburger').addEventListener('click', function() {
+        const navbar = document.querySelector('.navbar');
+        navbar.classList.toggle('active');
+    });
 });
 
 
