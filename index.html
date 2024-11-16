@@ -20,13 +20,12 @@
         <a href="#">Услуги</a>
         <a href="#">Контакты</a>
     </nav>
-    
-    
-    
+
     <div id="coupon" class="popup hidden">
         <p>Получите скидку 20%! Промокод: WELCOME20</p>
         <button id="close-coupon">Закрыть</button>
     </div>
+
     <main>
         <section id="about">
             <h1>PetsJet</h1>
@@ -66,25 +65,16 @@
                 <textarea id="comments" name="comments" rows="4"></textarea>
         
                 <button type="submit">Отправить</button>
-                <button class="hamburger" onclick="toggleMenu()">Отправить</button>
             </form>
         </section>
-        
- 
     </main>
+    
     <footer>
         <p>© 2024 PetsJet</p>
     </footer>
+
     <script src="script.js"></script>
     <img src="PetsJet.jpg" class="zoom-on-hover" alt="Zoomable Image">
-    <script>
-        // Добавляем обработчик события для гамбургера
-        window.onload = function() {
-            document.getElementById('hamburger').addEventListener('click', function() {
-                const navbar = document.querySelector('.navbar');
-                navbar.classList.toggle('active');
-            });
-        };
-    </script>
+    
 </body>
 </html>
