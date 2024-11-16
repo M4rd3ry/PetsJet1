@@ -76,5 +76,15 @@
     </footer>
     <script src="script.js"></script>
     <img src="PetsJet.jpg" class="zoom-on-hover" alt="Zoomable Image">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navbar = document.querySelector('.navbar');
+            const hamburger = document.querySelector('.hamburger');
+            
+            hamburger.addEventListener('click', () => {
+                navbar.classList.toggle('active');  // Переключение класса 'active' для отображения/скрытия меню
+            });
+        });
+    </script>
 </body>
 </html>
